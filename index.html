@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+
+body {
+
+  font-family: 'Poppins', sans-serif;
+  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThVP-TlIFb3DVrF9K66VQQNiBG6r7-ZjN54Q&usqp=CAU");
+   background-size:100%100%;
+   background-repeat:no-repeat;
+   background-attachment:fixed;
+
+
+}
+
+
+#slider {
+  position:relative;
+  width: 80%;
+  height: 54vw;
+  margin-top:1%;
+  margin: auto;
+  font-family: 'Helvetica Neue', sans-serif;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+input[type=radio] {
+  position: relative;
+  top: 108%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin: 0 15px 0 0;
+  opacity: 0.4;
+  transform: translateX(-83px);
+  cursor: pointer;
+  display:none;
+  }
+
+  #slider label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  color: white;
+  font-size: 70px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 400ms ease;
+  }
+  
+
+  
+  /* Slider Functionality */
+  
+  /* Active Slide */
+  #s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5 {
+  box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+  transform: translate3d(0%, 0, 0px);
+  }
+  
+  /* Next Slide */
+  #s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+  transform: translate3d(15%, 0, -100px);
+  }
+  
+  #s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide1, #s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(30%, 0, -250px);
+  }
+  #s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(-30%, 0, -250px);
+  }
+  #s1:checked ~ #slide5, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+  transform: translate3d(-15%, 0, -100px);
+  }
+  
+  
+.pre
+{
+  font-family: 'Times New Roman', serif;
+  color:maroon;
+  margin-top:0;
+  font-size: 48pt;
+  font-weight: bold;
+  text-align:center;
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(-225deg,#231557 0%,#44107a 29%,#ff1361 67%,#fff800 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size:94pt;
+        position:absolute;
+       top:2.2%;
+       left:20%;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+img
+{
+  position:relative;
+  margin-top:10%;
+  left:0;
+  right:0;
+}
+
+
+
+span {
+    font-family: 'Poppins', sans-serif;
+position:relative;
+margin-top:11.2%;
+margin-left:56%;
+  transform: translate(-50%, -50%);
+  display: block;
+  color:black;
+  font-size: 144px;
+  letter-spacing: 8px;
+  cursor: pointer;
+}
+
+span::before {
+  content: "2k22";
+  position: absolute;
+  color: transparent;
+  background-image: repeating-linear-gradient(45deg,transparent 0,transparent 2px,gold 2px,gold 4px);
+  -webkit-background-clip: text;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+  transition: 1s;
+}
+
+span::after {
+  content: "2k22";
+  position: absolute;
+  color: transparent;
+  background-image: repeating-linear-gradient(135deg,transparent 0,transparent 2px,gold 2px,gold 4px);
+  -webkit-background-clip: text;
+  top: 0px;
+  left: 0px;
+  transition: 1s;
+}
+
+span:hover:before {
+  top: 10px;
+  left: 10px;
+}
+
+span:hover:after {
+  top: -10px;
+  left: -10px;
+} 
+
+
+
+
+div{
+padding:1.4vw;
+}
+p{
+
+font-family: 'Times New Roman', serif;
+font-weight: bold;
+text-align:center;
+position:relative;
+margin-top:10%;
+font-size:2vw;
+}
+
+video{margin:1% auto;position:relative;}
+
+
+h3{
+
+font-family: 'Times New Roman', serif;
+font-weight: bold;
+align-items: center;  
+position:relative;
+top:150%; 
+font-size:2vw;
+padding:1.4vw;
+}
+
+
+.button {
+  background-color:#C68E17;
+  border: none;
+  color: black;
+  padding: 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 46px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position:relative;
+  top:146%; left:20%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.button1 {border-radius: 18px;}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1 class="pre">SANGAMESHWAR <br> COLLEGE , SOLAPUR</h1>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3  class="animate-charcter">
+       B.SC.(ECS)
+      </h3>
+    </div>
+  </div>
+</div>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-u9hDSNzlEeSCrZ4jKBbnpyhfF-8qSIOSjg&usqp=CAU" height="320" width="1000">
+
+<span>2k22</span>
+
+
+
+<section id="slider">
+  <input type="radio" name="slider" id="s1" checked>
+  <input type="radio" name="slider" id="s2">
+  <input type="radio" name="slider" id="s3">
+  <input type="radio" name="slider" id="s4">
+  <input type="radio" name="slider" id="s5">
+
+<label for="s1" id="slide1">
+   <img src="s55.jpg" height="100%" width="100%">
+</label>
+<label for="s2" id="slide2">
+   <img src="s1.jpg" height="100%" width="100%">
+</label>
+<label for="s3" id="slide3">
+   <img src="s99.jpg" height="100%" width="100%">
+</label>
+<label for="s4" id="slide4">
+   <img src="s98.jpg" height="100%" width="100%">
+</label>
+<label for="s5" id="slide5">
+   <img src="s88.jpg" height="100%" width="100%">
+</label>
+</section>
+
+
+
+<div>
+<p>
+The students of 2nd & 3rd year from Dept. of Computer Science organised Fresher's party on Aug 27, 2022 to welcome the freshly inducted batch of 2022.
+Sangameshwar College organize the fresher's party every year. 
+<br>The purpose of Fresher's Party is to welcome new students in a friendly atmosphere and to encourage their creative impulses to boost their confidence. 
+It is the day where seniors and juniors finally bond and unite to celebrate being part of the college. 
+The senior batch students welcome their juniors, all guest and teachers. The program starts with 'Aarti'.
+And it is accomplished by so many exciting events and programs like games, traditional, fusion, and modern dances, breathtaking singing performances, and splendid decoration, thus making it a soulful experience. 
+<br>
+The sangameshwar College Solapur explored the talent of the beginners and existing students through this fresher's party. 
+Moreover, these types of celebrations help juniors to form bonds and ensure good coordination with seniors. 
+This leads to a better understanding among all..!</p></div>
+<br>
+<video width="1000px" controls poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYZKXodPTD0CuZu8hFhHoOLnPp5bnSfU0Nbw&usqp=CAU" height="766px">
+<source src="v1.mp4" type="video/mp4">
+</video>
+<div>
+<h3>
+Teacher's play an imperative role in students' lives. They actively participate and guide students towards a successful event.
+Fresher's Party of Sangameshwar College in Solapur consists of hard work by students, dedication and understanding among leaders and team members. 
+Students enjoy a fun evening with their peers and cherish good quality time spent with each other.
+<br> The event creates many memories for the first year students and their seniors alike, with a spellbinding array of cultural programs and social activities.
+</h3>
+</div>
+<br>
+<a href="https://samwebsit.github.io/photogallery.github.io/" >
+<button class="button button1">VIEW PHOTO GALLARY</button></a>
+</body>
+</html>
